@@ -31,6 +31,8 @@ defined('MOODLE_INTERNAL') || die();
  * @param theme_config $theme The theme config object.
  */
 function theme_boost_hawkins_css_tree_post_processor($tree, $theme) {
+    error_log('theme_boost_hawkins_css_tree_post_processor() is deprecated. Required' .
+        'prefixes for Bootstrap are now in theme/boost_hawkins/scss/moodle/prefixes.scss');
     $prefixer = new theme_boost_hawkins\autoprefixer($tree);
     $prefixer->prefix();
 }
